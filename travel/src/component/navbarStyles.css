@@ -1,0 +1,118 @@
+.navbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  width: 95%;
+  height: 80px;
+  background-color: #fff;
+  padding: 0 30px;
+  border-radius: 10px;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+.navbar-logo {
+  color: #8d8585;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+.nav-links {
+  text-decoration: none;
+  color: #8d8585;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.nav-links:hover {
+  background-color: #716a6a;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-links-mobile {
+  display: none;
+}
+button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+.menu-icons {
+  display: none;
+}
+button:hover {
+  background-color: #8d8585;
+  color: #fff;
+}
+@media screen and (max-width: 850px) {
+  .navbarItems {
+    z-index: 99;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* important value for the left swap and right swap */
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  button {
+    display: none;
+  }
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #474343;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .menu-icons {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #716a6a;
+  }
+}
