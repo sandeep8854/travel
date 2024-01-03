@@ -79,7 +79,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          // result.toast.success("Hi Sandeep has been send");
           toast(`your message has been send successfully`);
           console.log(result.text);
           console.log("message sent");
